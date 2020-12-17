@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ThienHi</title>
+    <link rel="stylesheet" href="{% static 'sports/index.css' %}" >
+</head>
+<body>
+    <div class="header">
+        <h1>My Content</h1>
+    </div>
+    <div class="menu">
+        <h1>Menu link</h1>
+        <ul>
+            <button><a href="{% url 'sport:listQuestions' %}">Vote</a></button>
+            <li><a href="https://www.facebook.com/Cristiano/">Cr7</a></li>
+            <li><a href="https://www.facebook.com/namblue">Nam Blue</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100013919736220">ThienHi</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content%}
+        {% endblock %}
+    </div>
+</body>
+</html>

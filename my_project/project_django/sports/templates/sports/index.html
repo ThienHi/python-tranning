@@ -1,0 +1,13 @@
+{% extends 'sports/stastic.html' %}
+{% block content %}
+    <h1>Đây là <u>{{ name }}</u>,chào mừng bạn đến với Django</h1>
+    <img width="900" height="500" src="https://bloggame.net/uploads/worigin/2020/03/28/Hinhnendautruongchanlydepnhat15e7eccb8dbb4f_5abfbc798434fbe082a09236905b14df.jpg" / >
+    <p>My Idol:</p>
+    <ul>
+        {% for item in idol %}
+            {% if item != "Thiện Hi" %}
+                <li>{{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}

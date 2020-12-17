@@ -1,0 +1,28 @@
+.header {
+  background-color: #ccc;
+  padding: 30px;
+  /* margin-left: 15%; */
+}
+.menu {
+  background-color: aqua;
+  /* display: flex; */
+  width: 15%;
+  /* text-align: center; */
+}
+.menu ul li {
+  list-style: hebrew;
+  /* float: left; */
+  width: 20%;
+  padding: 6px 7px;
+}
+.content {
+  display: inline-block;
+  color: red;
+}
+.form-answer {
+  color: yellow;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
