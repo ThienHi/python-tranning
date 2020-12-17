@@ -1,0 +1,21 @@
+{% extends 'sports/stastic.html' %}
+
+{% block content%}
+
+    {% if answer %}
+        {{answer.questions}}
+        <form action="{% url 'sport:vote' answer.id %}" class="form-answer" method="post">
+            {% csrf_token %}
+            <!-- <ul> -->
+                {% for item in answer.choicesquestion_set.all %}
+                    <input type="radio" name="choice" value="{{item.id}}"style="color: rgb(179, 26, 240);" >
+                        {{ item.choice_text}}
+                    </input>
+                    <br/>
+                {% endfor %}
+                <input type="submit" />
+            <!-- </ul> -->
+        </form>
+    {% endif %}
+
+{% endblock %}

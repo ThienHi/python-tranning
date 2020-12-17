@@ -1,0 +1,12 @@
+{% extends 'sports/stastic.html' %}
+
+{% block content%}
+    {% if vote %}
+        <h1>{{vote.questions}}</h1>
+        <p>Vote</p>
+        {% for item in vote.choicesquestion_set.all %}
+            <p>{{item.choice_text}} : {{item.vote}}</p>
+        {% endfor %}
+    {% endif %}
+    <button><a href="{% url 'sport:Hello' %}">Back Home</a></button>
+{% endblock %}

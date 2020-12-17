@@ -1,0 +1,13 @@
+{% extends 'sports/stastic.html' %}
+
+{% block content%}
+
+    {% if list %}
+        {% for item in list %}
+            <a href="{% url 'sport:answer' item.id %}"><p style="color: rgb(179, 26, 240);" >{{ item.questions}}</p></a>
+        {% endfor %}
+    {% else %}
+        <p style="color:red;" >Đéo có dữ liệu</p>
+    {% endif %}
+
+{% endblock %}
