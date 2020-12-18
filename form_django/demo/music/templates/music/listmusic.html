@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>List Music</h1>
+        {% if list %}
+            <div class="list-music" >
+                {%  for song in list%}
+                    <h4 style="color: red; font-size:15px;">{{song.id}}, {{song.nameSong}} -- {{song.content}}</h4>
+                    <!-- <h3></h3> -->
+                    <h4></h4>
+                    <p style="color: violet; font-size:15px;">{{song.created_at}}</p>
+                {% endfor %}
+            </div>
+            <button type="submit" style="color: gold; background-color:cyan;">Back</button>
+        {% endif %}
+</body>
+</html>
