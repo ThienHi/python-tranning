@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App Music ThiệnHi</title>
+</head>
+<body>
+    <form action="{% url 'music:saveMusic' %}" method="post">
+        {% csrf_token %}
+        <h3>Music</h3>
+        {{add.nameSong}}
+        <h3>Content</h3>
+        {{add.content}}
+        <h3>Created at</h3>
+        <input type="datetime-local" value="">
+        {{add.created_at}}
+        <!-- <input type="datetime-local" value="{{add.created_at}}"> -->
+        <button type="submit" value="Add" >
+    </form>
+</body>
+</html>
